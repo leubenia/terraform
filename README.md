@@ -38,3 +38,11 @@ resource "aws_instance" "web" {
 ```
 
 기본 WebServerInstance 를 생성하는 예제
+
+## 메모
+
+프로바이더를 셋팅할때 리전을 선택해야됨.
+AWS에 리스트있음 ap-northeast-2 난이거선택
+
+엑세스키랑 시크릿 키가 필요함
+AWS에 IAM에 시크릿키 엑세스키 발급가능
