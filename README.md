@@ -39,6 +39,12 @@ resource "aws_instance" "web" {
 
 기본 WebServerInstance 를 생성하는 예제
 
+- - -
+
+### Terraform AWS 공식문서 링크
+
+<https://registry.terraform.io/providers/hashicorp/aws/latest/docs>
+
 ## 메모
 
 프로바이더를 셋팅할때 리전을 선택해야됨.
@@ -46,3 +52,38 @@ AWS에 리스트있음 ap-northeast-2 난이거선택
 
 엑세스키랑 시크릿 키가 필요함
 AWS에 IAM에 시크릿키 엑세스키 발급가능
+
+### 테라폼 명령어 Set
+
+#### 테라폼 변경점 확인
+
+```bash
+terraform plan
+```
+
+테라폼 설정이 이상이 없는지 확인한다.
+실재로 어떠한식으로 인프라가 변경되었는지도 확인 가능
+But plan을 할때 실재로 적용하지 않고 테스트만 해서 AWS의 권한 문제 등으로 거절 되는것은 검증해주지 않음
+- - -
+
+#### 테라폼 실행
+
+```bash
+terraform apply
+```
+
+테라폼을 실행한다.
+중요한점 인프라스트럭처 이므로 Terraform이 실패했다고 롤백해주지는 않는다.
+성공한 부분까지는 적용 실패한 부분부터 다시 적용해야된다.
+- - -
+
+#### 테라폼 그래프
+
+```bash
+terraform graph
+```
+
+아직은 잘모르겠지만 설정한 리소스의 의존성 그래프를 확인이 가능하다.
+GraphViz 형식으로 [GraphViz]:<https://dreampuf.github.io/GraphvizOnline> 를 보여주는곳으로 확인이 가능.
+
+- - -
