@@ -87,3 +87,12 @@ terraform graph
 GraphViz 형식으로 [GraphViz]:<https://dreampuf.github.io/GraphvizOnline> 를 보여주는곳으로 확인이 가능.
 
 - - -
+
+#### 테라폼 디스트로이
+
+```bash
+terraform destroy
+```
+
+말그대로 디스트로이 현재 계획되거나 테라폼으로 apply 되어있는 인프라를 다 제거한다
+테라폼이 아닌 인프라는 삭제되지 않는다. -확인 필요
