@@ -96,3 +96,18 @@ terraform destroy
 
 말그대로 디스트로이 현재 계획되거나 테라폼으로 apply 되어있는 인프라를 다 제거한다
 테라폼이 아닌 인프라는 삭제되지 않는다. -확인 필요
+
+## .terraform 폴더
+
+이폴더는 대충 생각하면 테라폼의 node module같은 존재인가 보다.
+
+```bash
+terraform init
+```
+
+해당 명령어로 테라폼을 진행한다.
+
+## terraform.tfstate
+
+AWS올리기전에 정의해주는것.
+이 스테이터스 파일을 변경하면 오류가 생김 조심..!
